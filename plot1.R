@@ -8,7 +8,7 @@ require(lubridate)
 
 ## Load dataset
 
-file <- file.path("data", "household_power_consumption.txt")
+file <- file.path("household_power_consumption.txt")
 power <- read.table(file, header = TRUE, sep = ";", quote = "", na.strings = "?", colClasses = c("character", "character", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric"))
 
 power$Date <- dmy(power$Date)
