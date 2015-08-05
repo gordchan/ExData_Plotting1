@@ -26,5 +26,5 @@ power <- power %>% mutate(Date_Time = ymd_hms(paste(power$Date, power$Time)))
 ## Plot line graph
 
 png(filename = "plot2.png")
-plot(power$Date_Time, power$Global_active_power, type="l", xlab="", ylab="Global Active Power (kilowatts)")
+  plot(power$Date_Time, power$Global_active_power, type="l", xlab="", ylab="Global Active Power (kilowatts)")
 dev.off()
