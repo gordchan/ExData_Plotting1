@@ -25,9 +25,6 @@ power <- power %>% mutate(Date_Time = ymd_hms(paste(power$Date, power$Time)))
 
 ## Plot line graph
 
-x_range <- range(power$Date_Time)
-y_range <- range(power$Sub_metering_1)
-
 png(filename = "plot3.png")
   plot(power$Date_Time, power$Sub_metering_1, type="l", xlab="", ylab="Energy sub metering")
     lines(power$Date_Time, power$Sub_metering_2, col = "red")
